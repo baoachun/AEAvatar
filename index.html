@@ -154,62 +154,6 @@
 </section>
 
 
-<section class="section">
-  <div class="container is-max-desktop">
-    <!-- Abstract. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <p>
-            Recent advances in 3D Gaussian Splatting (3DGS) have enabled real-time rendering of 
-            neural scenes with impressive efficiency. However, existing 3DGS-based head avatar 
-            generation methods suffer from several limitations that hinder practical use. The 
-            resulting avatars are typically static and cannot be driven by expressions; their 
-            geometry and texture lack fine-level detail, and the overall design is not conducive 
-            to editing or personalization. To address these limitations, we present AEAvatar, 
-            an Animatable and Editable Generative Gaussian Head Avatar framework for producing 
-            high-quality, controllable 3D avatars. AEAvatar employs a 2D GAN to generate per-pixel 
-            attribute maps, which are indexed via UV coordinates to produce 3D Gaussian attributes. 
-            The UV space is partitioned into static and dynamic regions, each used to index a 
-            separate set of Gaussians. Dynamic Gaussians are bound to the FLAME mesh to support 
-            facial deformation and animation, while static Gaussians represent rigid regions such
-            as hair and shoulders. With only around 150K Gaussians, AEAvatar achieves fast 
-            rendering at a resolution of 512x512. Caching the static Gaussians during 
-            inference further improves rendering efficiency, enabling real-time animation at up 
-            to 160 FPS. Furthermore, identity editing such as 3D face swapping can be easily 
-            performed by replacing either the dynamic or static set of Gaussians.These 
-            capabilities make AEAvatar a practical and effective solution for high-fidelity, 
-            real-time, and highly controllable 3D head avatar synthesis.
-          </p>
-        </div>
-      </div>
-    </div>
-    <!--/ Abstract. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Pipeline</h2>
-        <div class="content has-text-justified">
-          <p>
-            We adopt StyleGAN2 as the backbone framework to learn and model 3D head avatars 
-            from 2D images. The generator produces Gaussian planes, and the UV coordinates 
-            are divided into dynamic and static parts, which are used to index the planes 
-            separately to obtain initial Gaussian attributes. These attributes are then bound 
-            to the mesh faces and splatted to generate rendered images under given camera 
-            parameters. The rendered images, along with the real images and mesh vertex 
-            coordinates, are fed into the discriminator to distinguish between real and fake.
-          </p>
-        </div>
-        <div>
-          <img src="./static/images/method.png" alt="method" class="center">
-        </div>
-      </div>
-    </div>
-    <br>
-
-  </div>
-</section>
-
 <p>&nbsp;</p>
 
 <section class="hero is-light is-small">
@@ -293,7 +237,7 @@
 </section>
 
 
-<section class="section" id="BibTeX">
+<!-- <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
     <pre><code>@article{bao2025aeavatar,
@@ -304,7 +248,7 @@
 }
     </code></pre>
   </div>
-</section>
+</section> -->
 
 
 <footer class="footer">
